@@ -1,0 +1,4 @@
+<can-import from="ag-grid/dist/styles/ag-grid.css" />
+<can-import from="ag-grid/dist/styles/ag-theme-balham.css" />
+
+<div id="tableId" class="ag-theme-balham" style="width: 80%; height: 500px;"/>

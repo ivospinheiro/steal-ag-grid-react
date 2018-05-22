@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <can-import from="steal-ag-grid-react/styles.less" />
+    <can-import from="steal-ag-grid-react/app" export-as="viewModel" />
+
+    <can-import from="steal-ag-grid-react/home/home" />
+
+    <h1>{{message}}</h1>
+
+    <my-home />
+
+    {{#switch env.NODE_ENV}}
+      {{#case "production"}}
+        <script src="{{joinBase 'steal.production.js'}}"></script>
+      {{/case}}
+      {{#default}}
+        <script src="/node_modules/steal/steal.js"></script>
+      {{/default}}
+    {{/switch}}
+  </body>
+</html>
